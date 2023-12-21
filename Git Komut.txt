@@ -1,0 +1,79 @@
+Git cd ile gireriz cd.. ile cıkış yapılır 
+mkdir ile yeni dosya olusturup masaüstüne onun üzerinden işlemler yapabiliriz
+Git init ile git uzantısı oluştururuz
+touch der isek dosya uzantısı verırsek hangi alanda calısıyorsak onu gosterebılırız(flutter vs)
+Git status ile yaptıgımız değişikleri görürüz 
+Git add ile commit oncesi sanal yere alırız git add. ile tüm dosyalar eklenir (git commit --m "(açıklama yapılır)");
+Git commit ile göndeririz 
+----Git log ile yaptıgımız commitlerine ne zaman ve nasıl olduğunu görürüz kısa hali git log--oneline tek satırda görürürüz
+
+--------Git versiyon değiştirme-------
+Git check out ile yanlıslıkla sildiğimiz dosyaların önceki commitine dönebiliyoruz kullanımı ise söyle (git checkout (buraya git logdan aldıgımız değer atılır) -- . ile kullanılır).
+
+-----Git diff ile dosya içi yapılan değişiklikler gösterilir git diff (dosya adı verirsek) o dosyadaki değişikliği gösterir----
+---- Git restore değişiklikleri geri alma--------
+Eğer henüz çalışma alanında yapar isek değişiklik git checkout (dosya adı) ile geri alırız ama gönderdiğimiz dosyayı önce geri cekip git reset HEAD (dosyad adı) sonrasında check out işlemi yaparız.
+
+----Git remove-----
+Git dosya silme işlemleri git rm (dosya adı)
+Eğer klasör silme ister isek git rm -r /(klasör adı) eklenip bu şekilde silinir.
+---Git move dosya ismi değiştirme ve dosya taşıma  ve taşırken dosya ismi değiştirme-----
+git mv (değiştirmek istediğiniz dosya adı) (dosyanın yeni adı)
+
+yeni klasöre taşımak icin 
+git mv (dosya adı) (klasör adı)/
+
+taşırken dosya ismi değiştirme dosya yolu verirken / işaretten sonra dosya ismi verirsek taşırken ismi değişir
+git mv (dosya adı) (klasör adı)/.(dosya yeni adı)
+
+----Git alias----
+Bazı özellikleri kısaltmak ıcın (ihtiyaça göre)
+
+
+----------------GitHub------------------
+git remote add ile uzak sunucudaki repoya bağlanıp ekleme yaparız mesela git remote add origin (repodan alınan bağlantı);
+sonrasında git remote origin deriz
+
+---Push atmak ıcın git push -u origin master deriz
+---Pull icin ise git pull kullanırız direkt ve ekranımızda gözükür
+
+---Git ignore (Göz altı etmek gitte gözükmek istemediğimiz dosyalar)
+Proje oluşturulurken gizlenecek olan dosyalar belirlenmeli 
+touch .gitignore diye belirlenmeli sonrasında not defteri olarak git ignore açılıp gizlenecek dosyalar yazılmalı
+Örnek: dosya ise sadece = data.txt
+klasör ise = dizin/*
+klasörde gizlenmicek ayrı kalacak olanı başına ünlem koyarak yazılmalı = !dizin/123.txt
+diyip add yapıp commitlenip push atılmalı.
+
+-----------Branch Kavramı-----------
+Projelerde branchlarde çalışırız developer branch geliştirme yapılı masterda ise asıl kodlar verilir.
+git branch ile hangi branchde olduğumuzu görebiliyoruz
+git branch --all ile tüm branchleri görebiliriz 
+git fetch ile yeni eklenen brenchi ulaşırız
+Git branch (yeni lokalde oluşacak olan branch ismi) eklenir sonrasında ona geçmek için git checkout (yeni branch ismi)
+Yeni branch ile push atarken git push -u origin (yeni branch ismi)
+Başka birinin dev branchinde yaptıgı değişikliği gene burada pull edip çekip kullanabiliriz.
+git checkout (geçmek istenen branch) ile branchler üzeri değişiklik yapılabiliriz
+Dev branchin de yaptıgımız tüm değişiklikleri master branche,ana branche almak için önce master branche geçilir sonrasında  git merge (alınmak istenen branch) şeklinde yazılır.
+Siteden yeni branch açıldıktan sonra silersek onu geri getirebiliriz branchler kısmından 
+Lokalde yeni branch açarsak onu getirmek için git fetch (branch ismi)
+Lokalde branch icin git branch (branch ismi)
+Branch silmek için silinen branchlere bak kontrol et olmayanları sil demek için kullanılır git fetch -p 
+Lokal branch silmek için git branch -D (branch ismi)
+
+---Readme Dosyası---
+Proje ile ilgili bilgi verilen yerdir
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
